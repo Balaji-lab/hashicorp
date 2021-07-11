@@ -31,16 +31,16 @@ variable "region" {
 ##################################################################################
 # PROVIDERS
 ##################################################################################
-# provider "aws" {
-#   profile = "default"
-#   region  = "us-west-2"
-# }
+ provider "aws" {
+       profile = "default"
+  region  = "us-west-2"
+ }
 
-provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
-  region     = var.region
-}
+#provider "aws" {
+ # access_key = var.aws_access_key
+  #secret_key = var.aws_secret_key
+  #region     = var.region
+#}
 
 
 resource "aws_instance" "app_server" {
